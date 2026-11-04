@@ -1,66 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Calibri, Carlito, Arial, sans-serif" font-size="14">
-  <defs>
-    <marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/>
-    </marker>
-  </defs>
-  <rect width="760" height="430" fill="#FFFFFF"/>
-
-  <!-- Columna Gradle -->
-  <text x="20" y="28" font-size="16" font-weight="bold" fill="#1F3864">1 · Gradle (versiones y plugins)</text>
-  <rect x="20" y="42" width="220" height="56" rx="6" fill="#EAF0F8" stroke="#1F3864"/>
-  <text x="32" y="64" font-family="Consolas, monospace" font-size="13">gradle/libs.versions.toml</text>
-  <text x="32" y="84" font-size="12" fill="#333">navigation = "2.10.2" (una sola vez)</text>
-
-  <rect x="20" y="130" width="220" height="56" rx="6" fill="#EAF0F8" stroke="#1F3864"/>
-  <text x="32" y="152" font-family="Consolas, monospace" font-size="13">build.gradle.kts (raíz)</text>
-  <text x="32" y="172" font-size="12" fill="#333">declara: apply false</text>
-
-  <rect x="20" y="218" width="220" height="76" rx="6" fill="#EAF0F8" stroke="#1F3864"/>
-  <text x="32" y="240" font-family="Consolas, monospace" font-size="13">app/build.gradle.kts</text>
-  <text x="32" y="260" font-size="12" fill="#333">aplica: android.application</text>
-  <text x="32" y="278" font-size="12" fill="#333">… y safeargs.kotlin, la ÚLTIMA</text>
-
-  <line x1="130" y1="98" x2="130" y2="128" stroke="#1F3864" stroke-width="2" marker-end="url(#f)"/>
-  <line x1="130" y1="186" x2="130" y2="216" stroke="#1F3864" stroke-width="2" marker-end="url(#f)"/>
-
-  <!-- Grafo -->
-  <text x="290" y="28" font-size="16" font-weight="bold" fill="#1F3864">2 · Lo que escribes</text>
-  <rect x="290" y="42" width="200" height="120" rx="6" fill="#FFF8E6" stroke="#B7791F"/>
-  <text x="302" y="64" font-family="Consolas, monospace" font-size="13">res/navigation/</text>
-  <text x="302" y="82" font-family="Consolas, monospace" font-size="13">nav_graph.xml</text>
-  <text x="302" y="106" font-size="12" fill="#333">&lt;fragment&gt;  destinos</text>
-  <text x="302" y="124" font-size="12" fill="#333">&lt;action&gt;    flechas</text>
-  <text x="302" y="142" font-size="12" fill="#333">&lt;argument&gt;  datos</text>
-
-  <!-- Generado -->
-  <text x="540" y="28" font-size="16" font-weight="bold" fill="#1F3864">3 · Lo que genera Gradle</text>
-  <rect x="540" y="42" width="200" height="56" rx="6" fill="#EEF7EE" stroke="#2F7D32"/>
-  <text x="552" y="64" font-family="Consolas, monospace" font-size="12">InicioFragmentDirections</text>
-  <text x="552" y="84" font-size="12" fill="#333">una función por &lt;action&gt;</text>
-  <rect x="540" y="110" width="200" height="56" rx="6" fill="#EEF7EE" stroke="#2F7D32"/>
-  <text x="552" y="132" font-family="Consolas, monospace" font-size="12">DetalleFragmentArgs</text>
-  <text x="552" y="152" font-size="12" fill="#333">una propiedad por &lt;argument&gt;</text>
-
-  <line x1="490" y1="80" x2="538" y2="70" stroke="#2F7D32" stroke-width="2" marker-end="url(#f)"/>
-  <line x1="490" y1="124" x2="538" y2="138" stroke="#2F7D32" stroke-width="2" marker-end="url(#f)"/>
-  <text x="494" y="58" font-size="11" fill="#2F7D32">Assemble</text>
-
-  <!-- Safe Args lee el grafo -->
-  <path d="M240,256 C300,256 330,210 390,164" fill="none" stroke="#1F3864" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#f)"/>
-  <text x="262" y="292" font-size="12" fill="#1F3864">Safe Args lee el grafo</text>
-
-  <!-- Uso en fragmentos -->
-  <text x="20" y="372" font-size="16" font-weight="bold" fill="#1F3864">4 · Lo que usas</text><text x="20" y="394" font-size="16" font-weight="bold" fill="#1F3864">en Kotlin →</text>
-  <rect x="290" y="332" width="210" height="80" rx="6" fill="#F4F4F4" stroke="#555"/>
-  <text x="302" y="354" font-family="Consolas, monospace" font-size="12">InicioFragment</text>
-  <text x="302" y="376" font-family="Consolas, monospace" font-size="11">findNavController()</text>
-  <text x="302" y="394" font-family="Consolas, monospace" font-size="11">  .navigate(accion)</text>
-  <rect x="530" y="332" width="210" height="80" rx="6" fill="#F4F4F4" stroke="#555"/>
-  <text x="542" y="354" font-family="Consolas, monospace" font-size="12">DetalleFragment</text>
-  <text x="542" y="376" font-family="Consolas, monospace" font-size="11">val args: …Args</text>
-  <text x="542" y="394" font-family="Consolas, monospace" font-size="11">  by navArgs()</text>
-
-  <path d="M540,90 C512,96 515,250 400,330" fill="none" stroke="#2F7D32" stroke-width="2" marker-end="url(#f)"/>
-  <line x1="640" y1="166" x2="640" y2="330" stroke="#2F7D32" stroke-width="2" marker-end="url(#f)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="DejaVu Sans, Verdana, sans-serif">
+<defs><marker id="f" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2f6f9f"/></marker><marker id="fg" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#55646f"/></marker><marker id="fb" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,0 L0,3.5 L7,7 z" fill="#ffffff"/></marker></defs>
+<rect width="760" height="500" fill="#ffffff"/>
+<text x="20" y="22" text-anchor="start" font-size="12.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#55646f">Flujo de la plantilla: un destino de inicio, una acción y un argumento.</text>
+<text x="105.0" y="58" text-anchor="middle" font-size="12.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46" font-weight="bold">DetalleFragment</text>
+<rect x="25" y="72" width="160" height="300" rx="18" fill="#ffffff" stroke="#0f2b46" stroke-width="2"/>
+<circle cx="105.0" cy="80" r="2.5" fill="#0f2b46"/>
+<rect x="33" y="88" width="144" height="266" rx="4" fill="#ffffff" stroke="#c3cdd6" stroke-width="1.5"/>
+<rect x="33" y="88" width="144" height="34" rx="4" fill="#1F3864"/>
+<rect x="33" y="108" width="144" height="14" fill="#1F3864"/>
+<path d="M59,105 H45 M51,99 L45,105 L51,111" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="69" y="110" text-anchor="start" font-size="12" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff" font-weight="bold">Detalle</text>
+<line x1="87.0" y1="363" x2="123.0" y2="363" stroke="#c3cdd6" stroke-width="3" stroke-linecap="round"/>
+<text x="45" y="148" text-anchor="start" font-size="10" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">Recibido:</text>
+<rect x="41" y="156" width="128" height="28" rx="4" fill="#fdf6e3" stroke="#d9a441" stroke-width="1.5"/>
+<text x="47" y="175" text-anchor="start" font-size="13" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46" font-weight="bold">(sen mensaxe)</text>
+<rect x="45" y="198" width="62" height="26" rx="13" fill="#1F3864"/>
+<text x="76.0" y="215" text-anchor="middle" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff">Volver</text>
+<text x="380.0" y="58" text-anchor="middle" font-size="12.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46" font-weight="bold">InicioFragment</text>
+<rect x="300" y="72" width="160" height="300" rx="18" fill="#ffffff" stroke="#0f2b46" stroke-width="2"/>
+<circle cx="380.0" cy="80" r="2.5" fill="#0f2b46"/>
+<rect x="308" y="88" width="144" height="266" rx="4" fill="#ffffff" stroke="#c3cdd6" stroke-width="1.5"/>
+<rect x="308" y="88" width="144" height="34" rx="4" fill="#1F3864"/>
+<rect x="308" y="108" width="144" height="14" fill="#1F3864"/>
+<text x="320" y="110" text-anchor="start" font-size="12" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff" font-weight="bold">Inicio</text>
+<line x1="362.0" y1="363" x2="398.0" y2="363" stroke="#c3cdd6" stroke-width="3" stroke-linecap="round"/>
+<text x="320" y="146" text-anchor="start" font-size="9.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">Escribe algo e pulsa</text>
+<text x="320" y="160" text-anchor="start" font-size="9.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">«Seguinte». O texto</text>
+<text x="320" y="174" text-anchor="start" font-size="9.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">viaxa ao outro fragmento</text>
+<text x="320" y="188" text-anchor="start" font-size="9.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">como argumento de</text>
+<text x="320" y="202" text-anchor="start" font-size="9.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">Safe Args.</text>
+<text x="320" y="246" text-anchor="start" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#9aa5ae">Mensaxe</text>
+<line x1="320" y1="253" x2="440" y2="253" stroke="#2f6f9f" stroke-width="1.5"/>
+<rect x="372" y="270" width="68" height="26" rx="13" fill="#1F3864"/>
+<text x="406.0" y="287" text-anchor="middle" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff">Seguinte</text>
+<text x="655.0" y="58" text-anchor="middle" font-size="12.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46" font-weight="bold">DetalleFragment</text>
+<rect x="575" y="72" width="160" height="300" rx="18" fill="#ffffff" stroke="#0f2b46" stroke-width="2"/>
+<circle cx="655.0" cy="80" r="2.5" fill="#0f2b46"/>
+<rect x="583" y="88" width="144" height="266" rx="4" fill="#ffffff" stroke="#c3cdd6" stroke-width="1.5"/>
+<rect x="583" y="88" width="144" height="34" rx="4" fill="#1F3864"/>
+<rect x="583" y="108" width="144" height="14" fill="#1F3864"/>
+<path d="M609,105 H595 M601,99 L595,105 L601,111" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="619" y="110" text-anchor="start" font-size="12" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff" font-weight="bold">Detalle</text>
+<line x1="637.0" y1="363" x2="673.0" y2="363" stroke="#c3cdd6" stroke-width="3" stroke-linecap="round"/>
+<text x="595" y="148" text-anchor="start" font-size="10" font-family="DejaVu Sans, Verdana, sans-serif" fill="#333333">Recibido:</text>
+<rect x="591" y="156" width="128" height="28" rx="4" fill="#fdf6e3" stroke="#d9a441" stroke-width="1.5"/>
+<text x="597" y="175" text-anchor="start" font-size="13" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46" font-weight="bold">Ola, mundo</text>
+<rect x="595" y="198" width="62" height="26" rx="13" fill="#1F3864"/>
+<text x="626.0" y="215" text-anchor="middle" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#ffffff">Volver</text>
+<rect x="326.0" y="380" width="108" height="18" rx="9" fill="#eef7f0" stroke="#4f9e63" stroke-width="1.5"/>
+<text x="380.0" y="393" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#2e6b3d">startDestination</text>
+<line x1="464" y1="170" x2="569" y2="170" stroke="#2f6f9f" stroke-width="2" marker-end="url(#f)"/>
+<text x="517.5" y="160" text-anchor="middle" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#2f6f9f" font-weight="bold">con texto</text>
+<text x="517.5" y="186" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">mensaxe =</text>
+<text x="517.5" y="199" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">"Ola, mundo"</text>
+<line x1="296" y1="170" x2="191" y2="170" stroke="#2f6f9f" stroke-width="2" marker-end="url(#f)"/>
+<text x="242.5" y="160" text-anchor="middle" font-size="10.5" font-family="DejaVu Sans, Verdana, sans-serif" fill="#2f6f9f" font-weight="bold">campo vacío</text>
+<text x="242.5" y="186" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">mensaxe = ""</text>
+<line x1="569" y1="290" x2="466" y2="290" stroke="#55646f" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#fg)"/>
+<line x1="191" y1="290" x2="294" y2="290" stroke="#55646f" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#fg)"/>
+<text x="517.5" y="280" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">navigateUp()</text>
+<text x="517.5" y="306" text-anchor="middle" font-size="9" font-family="DejaVu Sans, Verdana, sans-serif" fill="#55646f">flecha · Volver · atrás</text>
+<text x="242.5" y="280" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">navigateUp()</text>
+<text x="242.5" y="306" text-anchor="middle" font-size="9" font-family="DejaVu Sans, Verdana, sans-serif" fill="#55646f">flecha · Volver · atrás</text>
+<text x="105.0" y="394" text-anchor="middle" font-size="10" font-family="DejaVu Sans, Verdana, sans-serif" fill="#55646f">args.mensaxe vacío:</text>
+<text x="105.0" y="408" text-anchor="middle" font-size="9.5" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">@string/sen_mensaxe</text>
+<text x="655.0" y="394" text-anchor="middle" font-size="10" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#55646f">args.mensaxe</text>
+<text x="655.0" y="408" text-anchor="middle" font-size="10" font-family="DejaVu Sans, Verdana, sans-serif" fill="#55646f">llega tal cual</text>
+<rect x="25" y="428" width="710" height="56" rx="6" fill="#eef7f0" stroke="#4f9e63" stroke-width="2"/>
+<text x="45" y="451" text-anchor="start" font-size="12" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46">Las pantallas de los lados son el mismo DetalleFragment con distinto argumento: una sola acción,</text>
+<text x="45" y="471" text-anchor="start" font-size="12" font-family="DejaVu Sans, Verdana, sans-serif" fill="#0f2b46">accion_inicio_a_detalle. La flecha de la barra, «Volver» y el atrás del sistema hacen navigateUp().</text>
 </svg>
